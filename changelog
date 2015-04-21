@@ -70,3 +70,15 @@ ACTUALIZACION 7
 - Organizacion de vistas.
 MEJORAS:
 + Controladores y vistas mas organizados.
+
+ACTUALIZACION 8
+<< Implementacion de POO en Controladores >>
+- Controladores
+	- Renderizacion de vistas con y sin layout para todos los controladores hijos de Controller
+	- Implementacion de redirecciones a otras acciones.
+- Vistas
+	- Eliminacion llamadas a ob_start y ob_get_clean para uso de layouts.
+	- Actualizacion de direccion de hipervinculos con rutas: "controllerId/actionId".
+- Actualizacion de controlador frontal para ejecutar un metodo de controlador.
+MEJORAS:
++ Controladores y vistas con una organizacion mas logica.
