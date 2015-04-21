@@ -14,3 +14,12 @@ ACTUALIZACION 2
 - Uso de ids y clases propias para personalizar el aspecto de los elementos.
 MEJORAS:
 + Aplicacion web mas amigable para el usuario final.
+
+ACTUALIZACION 3
+<< Implementacion de Arquitectura VC >>
+- Creacion de archivos secundarios(vistas) para almacenar el contenido de cada pagina web.
+- Actualizacion de paginas web(controladores) cargando su correspondiente 
+	archivo de vista en lugar de mostrar html directamente.
+MEJORAS:
++ Facilidad para concentrarse en la logica y diseño visual por separado.
++ Facilidad para que distintas personas contribuyan en un mismo proyecto.
