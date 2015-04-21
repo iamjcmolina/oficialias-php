@@ -1,12 +1,12 @@
 <?php
-/* @var $errorInesperado string */
+/* @var $exception Exception */
 /* @var $content string */
 ?>
 <?php ob_start(); ?>
-	<h2>Error</h2>
-
+	<h2>Error <?= $exception->getCode()>0? $exception->getCode() : '' ?></h2>
+	
 	<div class="alert alert-danger">
-		<?= $errorInesperado ?>
+		<?= $exception->getMessage() ?>
 	</div>
 <?php $content = ob_get_clean(); ?>
 <?php require './views/main-layout.php'; ?>

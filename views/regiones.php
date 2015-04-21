@@ -1,9 +1,6 @@
 <?php
-/* @var $dbConnection mysqli */
-/* @var $query string */
-/* @var $resultsetRegiones mysqli_result */
-/* @var $currentRegion array */
 /* @var $regiones array */
+/* @var $ex Exception */
 /* @var $content string */
 ?>
 <?php ob_start(); ?>

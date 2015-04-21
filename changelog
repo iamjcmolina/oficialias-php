@@ -31,3 +31,12 @@ ACTUALIZACION 4
 MEJORAS:
 + Vistas mas simples y faciles de entender.
 + Facilidad para realizar cambios a la estructura visual de la aplicacion.
+
+ACTUALIZACION 5
+<< Implementacion de Arquitectura MVC >>
+- Creacion de funciones que encapsulen la logica de negocio (modelo).
+- Uso de funciones del modelo en los controladores.
+- El modelo lanza excepciones cuando ocurren errores inesperados.
+- La pagina de error ahora muestra la informacion a partir de la excepcion capturada.
+MEJORAS:
++ Controladores liberados de manejar la logica de acceso a bases de datos.

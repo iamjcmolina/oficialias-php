@@ -1,9 +1,12 @@
 <?php
-/* @var $dbConnection mysqli */
-/* @var $query string */
 /* @var $clave string */
 /* @var $nombre string */
 /* @var $erroresValidacion array */
+/* @var $ex Exception */
+
+// Agregando librerias
+require './models/model-base.php';
+require './models/region-table.php';
 
 // Activando reporte de errores fatales y en tiempo de compilacion
 error_reporting(E_ERROR | E_COMPILE_ERROR);
@@ -11,50 +14,28 @@ error_reporting(E_ERROR | E_COMPILE_ERROR);
 session_start();
 
 // Inicializacion de variables
-$dbConnection = null;
-$query = '';
 $clave = '';
 $nombre = '';
 $erroresValidacion = array();
 
-// Conectandonos a la base de datos
-$dbConnection = new mysqli('localhost', 'root', '', 'control_oficialias');
-// Comprobando si hubo un error al conectarse a la base de datos
-if( $dbConnection->connect_error ){
-	// Almacenando mensaje de error en la session
-	$_SESSION['errorInesperado'] = 'Base de datos no disponible, favor de revisar';
-	// Redireccionando a pagina web para mostrar errores
-	header('Location: error.php');
-	exit();
-}else{
+try{
 	if( isset($_POST['clave'], $_POST['nombre']) ){
 		$clave = $_POST['clave'];
 		$nombre = $_POST['nombre'];
-		// Validando los campos antes de usarlos en el query de insercion de registro
-		if( empty($clave) ){
-			array_push($erroresValidacion, 'Olvidaste proporcionar la clave de la Region');
-		}
-		if( !is_numeric($clave) ){
-			array_push($erroresValidacion, 'La clave de la Region debe ser numerica');
-		}
-		if( empty($nombre) ){
-			array_push($erroresValidacion, 'Olvidaste proporcionar el nombre de la Region');
-		}
+		// Llamada a funcion del modelo para insertar una region, valida los datos internamente
+		$erroresValidacion = insertRegion($clave, $nombre);
 		if ( empty($erroresValidacion) ){
-			// Escapamos los valores para evitar ataques como la inyeccion de sql, Javascript, etc.
-			$clave = $dbConnection->real_escape_string($clave);
-			$nombre = $dbConnection->real_escape_string($nombre);
-			// Preparando el query para obtener los registro de regiones
-			$query = "INSERT INTO region(clave, nombre) VALUES ($clave, '$nombre')";
-			if( $dbConnection->query($query) ){
-				// Redireccionando a pagina de regiones
-				header('Location: regiones.php');
-				exit();
-			}else{
-				array_push($erroresValidacion, 'Fallo la ejecucion de la consulta, favor de revisar');
-			}
+			// Redireccionando a pagina de regiones
+			header('Location: regiones.php');
+			exit();
 		}
 	}
+}catch(Exception $ex){
+	// Almacenando la excepcion en la session
+	$_SESSION['exception'] = $ex;
+	// Redireccionando a pagina web para mostrar errores
+	header('Location: error.php');
+	exit();
 }
 
 require './views/crear-region.php';

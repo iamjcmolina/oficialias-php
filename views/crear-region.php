@@ -1,9 +1,8 @@
 <?php
-/* @var $dbConnection mysqli */
-/* @var $query string */
 /* @var $clave string */
 /* @var $nombre string */
 /* @var $erroresValidacion array */
+/* @var $ex Exception */
 /* @var $content string */
 ?>
 <?php ob_start(); ?>
