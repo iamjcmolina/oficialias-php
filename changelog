@@ -40,3 +40,19 @@ ACTUALIZACION 5
 - La pagina de error ahora muestra la informacion a partir de la excepcion capturada.
 MEJORAS:
 + Controladores liberados de manejar la logica de acceso a bases de datos.
+
+ACTUALIZACION 6
+<< Implementacion de Patron Active Record >>
+- Modelo:
+	- Superclase Model (reutilizacion para todos los modelos):
+		- Encapsulacion de errores.
+		- Implementacion de asignacion masiva para asignar todos los campos del modelo.
+	- Encapsulacion de los campos de las tablas de bases de datos en clases de modelo.
+- Vista:
+	- Uso de notacion de arreglos en nombres de campos de formulario.
+- Controlador:
+	- Actualizacion de logica usando objetos de modelo.
+MEJORAS:
++ Controladores liberados del manejo de:
+	+ Errores de validacion del modelo.
+	+ Campos de tablas de base de datos.

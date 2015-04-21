@@ -1,7 +1,5 @@
 <?php
-/* @var $clave string */
-/* @var $nombre string */
-/* @var $erroresValidacion array */
+/* @var $region Region */
 /* @var $ex Exception */
 /* @var $content string */
 ?>
@@ -15,11 +13,11 @@
 	</ol>
 
 	<!-- Mostramos errores de validacion, si los hay -->
-	<?php if( !empty($erroresValidacion) ){ ?>
+	<?php if( $region->hasErrors() ){ ?>
 		<div class="alert alert-danger">
 			<p><b>Por favor corrija los siguientes problemas</b></p>
 			<ul>
-				<?php foreach($erroresValidacion as $error){ ?>
+				<?php foreach($region->errors as $error){ ?>
 					<li><?= $error ?></li>
 				<?php } ?>
 			</ul>
@@ -28,15 +26,15 @@
 
 	<form method="post" class="form-horizontal"><!-- Formulario para crear region -->
 		<div class="form-group">
-			<label for="clave" class="col-sm-2 control-label">Clave</label>
+			<label for="region-clave" class="col-sm-2 control-label">Clave</label>
 			<div class="col-sm-4">
-				<input id="clave" class="form-control" name="clave" type="text" value="<?= $clave ?>" >
+				<input id="region-clave" class="form-control" name="Region[clave]" type="text" value="<?= $region->clave ?>" >
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="nombre" class="col-sm-2 control-label">Nombre</label>
+			<label for="region-nombre" class="col-sm-2 control-label">Nombre</label>
 			<div class="col-sm-4">
-				<input id="nombre" class="form-control" name="nombre" type="text" value="<?= $nombre ?>" >
+				<input id="region-nombre" class="form-control" name="Region[nombre]" type="text" value="<?= $region->nombre ?>" >
 			</div>
 		</div>
 		<div class="form-group">

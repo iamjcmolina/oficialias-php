@@ -1,12 +1,10 @@
 <?php
-/* @var $clave string */
-/* @var $nombre string */
-/* @var $erroresValidacion array */
+/* @var $region Region */
 /* @var $ex Exception */
 
 // Agregando librerias
-require './models/model-base.php';
-require './models/region-table.php';
+require './models/Model.php';
+require './models/Region.php';
 
 // Activando reporte de errores fatales y en tiempo de compilacion
 error_reporting(E_ERROR | E_COMPILE_ERROR);
@@ -14,17 +12,13 @@ error_reporting(E_ERROR | E_COMPILE_ERROR);
 session_start();
 
 // Inicializacion de variables
-$clave = '';
-$nombre = '';
-$erroresValidacion = array();
+$region = new Region();
 
 try{
-	if( isset($_POST['clave'], $_POST['nombre']) ){
-		$clave = $_POST['clave'];
-		$nombre = $_POST['nombre'];
-		// Llamada a funcion del modelo para insertar una region, valida los datos internamente
-		$erroresValidacion = insertRegion($clave, $nombre);
-		if ( empty($erroresValidacion) ){
+	if( isset($_POST['Region']) ){
+		$region->fill($_POST['Region']);
+		// Llamada a metodo del modelo para insertar una region, valida los datos internamente
+		if ( $region->insert() ){
 			// Redireccionando a pagina de regiones
 			header('Location: regiones.php');
 			exit();

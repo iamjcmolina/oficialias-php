@@ -1,5 +1,5 @@
 <?php
-/* @var $regiones array */
+/* @var $regiones Region[] */
 /* @var $ex Exception */
 /* @var $content string */
 ?>
@@ -24,9 +24,9 @@
 		<tbody>
 			<?php foreach($regiones as $region){ ?>
 				<tr>
-					<td><?= $region['id'] ?></td>
-					<td><?= $region['clave'] ?></td>
-					<td><?= $region['nombre'] ?></td>
+					<td><?= $region->id ?></td>
+					<td><?= $region->clave ?></td>
+					<td><?= $region->nombre ?></td>
 					<td><a href="#" >Editar</a></td>
 					<td><a href="#">Borrar</a></td>
 				</tr>

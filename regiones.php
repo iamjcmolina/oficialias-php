@@ -1,10 +1,10 @@
 <?php
-/* @var $regiones array */
+/* @var $regiones Region[] */
 /* @var $ex Exception */
 
 // Agregando librerias
-require './models/model-base.php';
-require './models/region-table.php';
+require './models/Model.php';
+require './models/Region.php';
 
 // Activando reporte de errores fatales y en tiempo de compilacion
 error_reporting(E_ERROR | E_COMPILE_ERROR);
@@ -15,7 +15,7 @@ session_start();
 $regiones = array();
 
 try{
-	$regiones = findAllRegiones();
+	$regiones = Region::findAll();
 } catch (Exception $ex) {
 	// Almacenando la excepcion en la session
 	$_SESSION['exception'] = $ex;
