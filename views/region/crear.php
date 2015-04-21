@@ -1,14 +1,13 @@
 <?php
 /* @var $region Region */
-/* @var $ex Exception */
 /* @var $content string */
 ?>
 <?php ob_start(); ?>
 	<h2>Crear region</h2>
 
 	<ol class="breadcrumb">
-		<li><a href="index.php">Inicio</a></li>
-		<li><a href="regiones.php">Regiones</a></li>
+		<li><a href="index.php?route=index">Inicio</a></li>
+		<li><a href="index.php?route=index-region">Regiones</a></li>
 		<li class="active">Crear region</li>
 	</ol>
 
@@ -44,4 +43,4 @@
 		</div>
 	</form>
 <?php $content = ob_get_clean(); ?>
-<?php require './views/main-layout.php'; ?>
+<?php require './views/layouts/main.php'; ?>

@@ -9,4 +9,4 @@
 		<?= $exception->getMessage() ?>
 	</div>
 <?php $content = ob_get_clean(); ?>
-<?php require './views/main-layout.php'; ?>
+<?php require './views/layouts/main-layout.php'; ?>

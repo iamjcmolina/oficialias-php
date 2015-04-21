@@ -56,3 +56,17 @@ MEJORAS:
 + Controladores liberados del manejo de:
 	+ Errores de validacion del modelo.
 	+ Campos de tablas de base de datos.
+
+ACTUALIZACION 7
+<< Implementacion de Patron Front Controller >>
+- Creacion de archivo controlador tranformando funcionalidad de antiguos controladores
+	como funciones (acciones).
+- Responsabilidades del controlador frontal (liberando de trabajo a las acciones):
+	- Consultar la ruta proporcionada por el usuario y ejecutarla.
+	- Configurar toda la aplicacion (configurar reportes de errores, activar uso de sesiones, etc.).
+	- Agregar librerias para toda la aplicacion.
+	- Manejo de errores inesperados ocurridos en las acciones.
+- Actualizacion de hipervinculos de las vistas hacia al controlador frontal.
+- Organizacion de vistas.
+MEJORAS:
++ Controladores y vistas mas organizados.

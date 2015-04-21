@@ -45,11 +45,11 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.php">Oficialias</a>
+							<a class="navbar-brand" href="index.php?route=index">Oficialias</a>
 						</div>
 						<div class="collapse navbar-collapse" id="main-navbar">
 							<ul class="nav navbar-nav"><!-- Vinculos a paginas web -->
-								<li><a href="regiones.php">Regiones</a></li>
+								<li><a href="index.php?route=index-region">Regiones</a></li>
 							</ul>
 						</div>
 					</div>
