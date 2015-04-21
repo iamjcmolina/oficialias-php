@@ -23,3 +23,11 @@ ACTUALIZACION 3
 MEJORAS:
 + Facilidad para concentrarse en la logica y diseño visual por separado.
 + Facilidad para que distintas personas contribuyan en un mismo proyecto.
+
+ACTUALIZACION 4
+<< Implementacion de Patron Decorator >>
+- Creacion de archivo para almacenar la estructura comun del sitio (main-layout).
+- Captura del contenido de las vistas e inclusion de main-layout.
+MEJORAS:
++ Vistas mas simples y faciles de entender.
++ Facilidad para realizar cambios a la estructura visual de la aplicacion.
