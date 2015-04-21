@@ -5,3 +5,12 @@ ACTUALIZACION 1
 	- Pagina para consultar y mostrar los registros de la tabla region.
 	- Pagina para insercion de registros en la tabla region.
 	- Pagina web para mostrar errores inesperados de la aplicacion.
+
+ACTUALIZACION 2
+<< Uso basico de bootstrap >>
+- Inclusion de archivos para uso de bootstrap.
+- Creacion y uso de archivo css para definicion de estilo visual personalizado.
+- Uso de clases de bootstrap para personalizar el aspecto de los elementos.
+- Uso de ids y clases propias para personalizar el aspecto de los elementos.
+MEJORAS:
++ Aplicacion web mas amigable para el usuario final.

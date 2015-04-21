@@ -1,0 +1,42 @@
+/**
+ * El estilo de las paginas web puede configurarse:
+ * 
+ * 1. Incrustado: Usando la propiedad style de cada etiqueta html.
+ * 2. En linea: Definiendo el estilo dentro de: 
+ *    <head><style>"Definir aqui el estilo"</style></head>
+ * 3. Usando archivos externos como este e incluyendolo en el documento:
+ *    <link href="ruta del archivo css" rel="stylesheet" type="text/css" >
+ * 
+ * Usamos la tercera forma debido a que nos da mas ventajas de reutilizacion
+ * entre paginas web.
+ * Se hace uso de selectores CSS para localizar elementos de las paginas web
+ * y aplicarles un estilo visual.
+ * 
+ */
+body{
+	background-color: #E3E3E3;
+}
+header{
+	padding-top: 15px;
+}
+footer{
+	border-top: 3px #E00000 solid;
+	font-size: 0.95em;
+	font-style: oblique;
+	color: #FFF;
+	background-color: #1F1F1F;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#page{
+	background-color: white;
+	border-top: 4px #AEE solid;
+}
+#content{
+	padding-bottom: 50px;
+}
+.center-block{
+	margin: 0 auto;
+}
