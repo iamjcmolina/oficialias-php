@@ -17,3 +17,6 @@ En este ejemplo se utilizara una base de datos mysql con las siguientes tablas y
 * municipio (id, clave, nombre, region_id)
 * oficialia (id, clave, nombre, municipio_id)
 * usuario (id, nombre, apellido_paterno, apellido_materno, email, password)
+
+Se proporciona el archivo data/create-database.sql para crear dicha 
+base de datos con algunos datos de ejemplo.

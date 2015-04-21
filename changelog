@@ -1,0 +1,7 @@
+ACTUALIZACION 1
+<< Programacion basica de bases de datos >>
+- Creacion de paginas web:
+	- Pagina principal para dar la bienvenida al usuario.
+	- Pagina para consultar y mostrar los registros de la tabla region.
+	- Pagina para insercion de registros en la tabla region.
+	- Pagina web para mostrar errores inesperados de la aplicacion.
